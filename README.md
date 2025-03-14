@@ -17,9 +17,7 @@ Ce projet implique la construction d'un pipeline de données utilisant Apache Ai
 
 L’architecture repose sur Composer (+Apache Airflow), déployé par terraform, pour orchestrer les traitements, avec stockage des données dans GCS et exécution des transformations via des scripts Python.
 
-Dans la version actuel tout est executé par l'utilisateur en bash. (v1)
-
-Une version automatisé pourra être mise en place avec de la ci/cd sur github (v2)
+Dans la version actuel tout est executé par l'utilisateur en bash.
 
 ## Prérequis
 
@@ -60,6 +58,16 @@ Avant de configurer le projet, suivez ces étapes pour créer un environnement v
      ```bash
      pip install -r requirements.txt
      ```
+
+## Exécution des Tests
+
+Pour exécuter les tests, utilisez la commande suivante dans le répertoire racine de votre projet :
+
+```bash
+pytest tests/
+```
+Cette commande exécutera tous les tests unitaires et d'intégration présents dans le répertoire `tests`.
+
 
 Ces étapes vous permettront de configurer un environnement isolé pour votre projet, garantissant que toutes les dépendances sont gérées correctement.
 
@@ -191,45 +199,37 @@ python script/analysis_task.py
 ![alt text](ad-hoc.png)
 
 
-
-## Exécution des Tests
-
-Pour exécuter les tests, utilisez la commande suivante dans le répertoire racine de votre projet :
-
-```bash
-pytest tests/
-```
-
-Cette commande exécutera tous les tests unitaires et d'intégration présents dans le répertoire `tests`.
-
 # Potentiels évolutions du code afin de gérer de grandes volumétries de Données
 
 Pour faire évoluer notre code afin de gérer de grandes volumétries de données, telles que des fichiers de plusieurs téraoctets ou des millions de fichiers, nous devrons considérer les éléments suivants et les modifications potentielles :
 
-1. **Traitement en Parallèle** :
+1. **Automatisation** :
+   - Nous automatisons le processus de déploiement et de maintenance du système en utilisant des outils comme argo
+   - Executer le composer afin de refresh toutes les donénes à un instant donnée (fichiers yaml)
+   - Mise en place d'une ci/cd permettant d'éxecuter tout nos tests, deploiement et script python automatiquement.
+
+2. **Traitement en Parallèle** :
    - Nous utiliserons des frameworks de traitement parallèle comme Apache Spark pour distribuer les tâches de traitement des données sur plusieurs nœuds, réduisant ainsi le temps nécessaire pour traiter de grands ensembles de données.
 
-2. **Formats de Stockage Efficaces** :
+3. **Formats de Stockage Efficaces** :
    - Nous utiliserons des formats de stockage efficaces comme Parquet ou Avro qui sont optimisés pour la performance de stockage et de requête, surtout lorsqu'il s'agit de grands ensembles de données.
    - Il sera plus efficace d'utiliser et de stocker directement les données sur des services comme Google Cloud Storage (GCS) ou BigQuery afin de minimiser le transfert de données. Des outils comme Fivetran pourront être utilisés pour intégrer les données directement dans ces services, permettant ainsi de consommer les données directement à partir de ces plateformes sans avoir à les transférer depuis le local vers le GCS du Composer.
 
-3. **Mise à l'Échelle des Ressources** :
+4. **Mise à l'Échelle des Ressources** :
    - Nous exploiterons les services cloud qui offrent des capacités d'auto-scaling pour allouer dynamiquement les ressources en fonction de la charge de travail.
    - Sur Google Cloud Platform (GCP), il sera possible de créer des services sur Composer qui pourront s'adapter automatiquement, comme Composer 2 qui évoluera automatiquement en fonction des exigences des DAG et tâches exécutées. Cela optimisera les coûts et les performances. Composer utilisera des clusters Kubernetes sous-jacents qui pourront être configurés pour l'auto-scaling, nous permettant de gérer efficacement les charges de travail fluctuantes sans intervention manuelle.
 
-4. **Surveillance et Journalisation** :
+5. **Surveillance et Journalisation** :
    - Nous mettrons en œuvre une surveillance et une journalisation robustes pour suivre les performances du système et identifier les goulets d'étranglement ou les échecs en temps réel.
    - Nous utiliserons Google Cloud Monitoring pour les métriques et les alertes.
    - Nous utiliserons Google Cloud Logging pour centraliser et analyser les logs.
    - Nous composerons notre pipeline de données avec Composer, qui s'intégrera à ces services pour suivre les DAGs et les tâches, et configurer des alertes en cas de problème.
 
-5. **Gestion des Erreurs et Reprises** :
+6. **Gestion des Erreurs et Reprises** :
    - Nous concevrons le système pour gérer gracieusement les erreurs et mettrons en œuvre des mécanismes de reprise pour les échecs transitoires.
    - Nous ajouterons davantage de tests unitaires pour garantir la robustesse du code et détecter les erreurs potentielles avant qu'elles n'affectent le système en production.
 
-6. **Automatisation** :
-   - Nous automatisons le processus de déploiement et de maintenance du système en utilisant des outils comme argo
-   - Executer le composer afin de refresh toutes les donénes à un instant donnée (fichiers yaml)
+
 
 En considérant ces éléments et en apportant les modifications nécessaires, nous pourrons améliorer l'évolutivité de notre pipeline de données pour gérer efficacement de grandes volumétries de données.
 
