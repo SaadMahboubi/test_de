@@ -23,7 +23,7 @@ with open('data/composer_bucket.json') as f:
     data = json.load(f)
     bucket_name = data['composer_bucket'].replace('gs://', '')
 
-# Upload DAGs and src to the same 'dags' directory
+# Upload DAGs and src to 'dags' directory
 upload_folder_to_gcs(bucket_name, 'dags', 'dags')
 upload_folder_to_gcs(bucket_name, 'src', 'dags/src')
 
