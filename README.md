@@ -136,6 +136,9 @@ Avant de passer à la gestion des erreurs et reprises, suivez ces étapes pour d
      ```
    - Confirmez l'application lorsque vous y êtes invité. patientez plusieurs minutes
 
+Déploiement du composer sur gcp : 
+
+![alt text](deploy_composer.png)
 
 ## Récupération du Nom du Bucket pour la config
 
