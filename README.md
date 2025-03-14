@@ -38,7 +38,7 @@ Avant de configurer le projet, suivez ces étapes pour créer un environnement v
 1. **Créer un environnement virtuel**:
    - Naviguez vers votre répertoire de projet :
      ```bash
-     cd /path/to/Python_test_DE
+     cd /path/to/test_de
      ```
    - Créez un environnement virtuel nommé `venv` :
      ```bash
