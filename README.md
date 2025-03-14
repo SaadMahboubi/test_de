@@ -99,11 +99,11 @@ Avant de passer à la gestion des erreurs et reprises, suivez ces étapes pour d
    - Créez un fichier `terraform.tfvars` dans le répertoire `terraform` de votre projet. Voici un template, ces informations serviront à la création de votre environnement Composer sur GCP.
 
    ```tr
-      project_id      = " "
-      region          = " "
-      zone            = " "
-      composer_name   = " "
-      service_account = " "
+      project_id      = "<id-du-projet>"
+      region          = "europe-west1"
+      zone            = "europe-west1-b"
+      composer_name   = "composer-airflow"
+      service_account = "your-service-account@<id-du-projet>.iam.gserviceaccount.com"
    ```
 1. **Initialisation de Terraform**:
    - Accédez au répertoire Terraform de votre projet :
