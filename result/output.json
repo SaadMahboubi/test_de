@@ -1,0 +1,374 @@
+{
+    "drugs": [
+        {
+            "atccode": "A04AD",
+            "drug": "DIPHENHYDRAMINE",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": 1,
+                        "title": "A 44-year-old man with erythema of the face diphenhydramine, neck, and chest, weakness, and palpitations",
+                        "journal": "Journal of emergency nursing",
+                        "date": "2019-01-01T00:00:00"
+                    },
+                    {
+                        "id": 2,
+                        "title": "An evaluation of benadryl, pyribenzamine, and other so-called diphenhydramine antihistaminic drugs in the treatment of allergy.",
+                        "journal": "Journal of emergency nursing",
+                        "date": "2019-01-01T00:00:00"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Diphenhydramine hydrochloride helps symptoms of ciguatera fish poisoning.",
+                        "journal": "The Journal of pediatrics",
+                        "date": "2019-01-02T00:00:00"
+                    }
+                ],
+                "clinical_trials": [
+                    {
+                        "id": "NCT01967433",
+                        "title": "Use of Diphenhydramine as an Adjunctive Sedative for Colonoscopy in Patients Chronically on Opioids",
+                        "journal": "Journal of emergency nursing",
+                        "date": "2020-01-01T00:00:00"
+                    },
+                    {
+                        "id": "NCT04189588",
+                        "title": "Phase 2 Study IV QUZYTTIR™ (Cetirizine Hydrochloride Injection) vs V Diphenhydramine",
+                        "journal": "Journal of emergency nursing",
+                        "date": "2020-01-01T00:00:00"
+                    },
+                    {
+                        "id": "NCT04237091",
+                        "title": "Feasibility of a Randomized Controlled Clinical Trial Comparing the Use of Cetirizine to Replace Diphenhydramine in the Prevention of Reactions Related to Paclitaxel",
+                        "journal": "Journal of emergency nursing",
+                        "date": "2020-01-01T00:00:00"
+                    }
+                ],
+                "journals": [
+                    {
+                        "title": "Journal of emergency nursing",
+                        "dates": [
+                            "2019-01-01T00:00:00",
+                            "2020-01-01T00:00:00"
+                        ]
+                    },
+                    {
+                        "title": "The Journal of pediatrics",
+                        "dates": [
+                            "2019-01-02T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "Journal of emergency nursing",
+                    "dates": [
+                        "2019-01-01T00:00:00",
+                        "2020-01-01T00:00:00"
+                    ]
+                },
+                {
+                    "title": "The Journal of pediatrics",
+                    "dates": [
+                        "2019-01-02T00:00:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "atccode": "S03AA",
+            "drug": "TETRACYCLINE",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": 4,
+                        "title": "Tetracycline Resistance Patterns of Lactobacillus buchneri Group Strains.",
+                        "journal": "Journal of food protection",
+                        "date": "2020-01-01T00:00:00"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Appositional Tetracycline bone formation rates in the Beagle.",
+                        "journal": "American journal of veterinary research",
+                        "date": "2020-01-02T00:00:00"
+                    },
+                    {
+                        "id": 6,
+                        "title": "Rapid reacquisition of contextual fear following extinction in mice: effects of amount of extinction, tetracycline acute ethanol withdrawal, and ethanol intoxication.",
+                        "journal": "Psychopharmacology",
+                        "date": "2020-01-01T00:00:00"
+                    }
+                ],
+                "clinical_trials": [],
+                "journals": [
+                    {
+                        "title": "Journal of food protection",
+                        "dates": [
+                            "2020-01-01T00:00:00"
+                        ]
+                    },
+                    {
+                        "title": "American journal of veterinary research",
+                        "dates": [
+                            "2020-01-02T00:00:00"
+                        ]
+                    },
+                    {
+                        "title": "Psychopharmacology",
+                        "dates": [
+                            "2020-01-01T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "Journal of food protection",
+                    "dates": [
+                        "2020-01-01T00:00:00"
+                    ]
+                },
+                {
+                    "title": "American journal of veterinary research",
+                    "dates": [
+                        "2020-01-02T00:00:00"
+                    ]
+                },
+                {
+                    "title": "Psychopharmacology",
+                    "dates": [
+                        "2020-01-01T00:00:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "atccode": "V03AB",
+            "drug": "ETHANOL",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": 6,
+                        "title": "Rapid reacquisition of contextual fear following extinction in mice: effects of amount of extinction, tetracycline acute ethanol withdrawal, and ethanol intoxication.",
+                        "journal": "Psychopharmacology",
+                        "date": "2020-01-01T00:00:00"
+                    }
+                ],
+                "clinical_trials": [],
+                "journals": [
+                    {
+                        "title": "Psychopharmacology",
+                        "dates": [
+                            "2020-01-01T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "Psychopharmacology",
+                    "dates": [
+                        "2020-01-01T00:00:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "atccode": "A03BA",
+            "drug": "ATROPINE",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": "",
+                        "title": "Comparison of pressure BETAMETHASONE release, phonophoresis and dry needling in treatment of latent myofascial trigger point of upper trapezius ATROPINE muscle.",
+                        "journal": "The journal of maternal-fetal & neonatal medicine",
+                        "date": "2020-01-03T00:00:00"
+                    }
+                ],
+                "clinical_trials": [],
+                "journals": [
+                    {
+                        "title": "The journal of maternal-fetal & neonatal medicine",
+                        "dates": [
+                            "2020-01-03T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "The journal of maternal-fetal & neonatal medicine",
+                    "dates": [
+                        "2020-01-03T00:00:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "atccode": "A01AD",
+            "drug": "EPINEPHRINE",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": 7,
+                        "title": "The High Cost of Epinephrine Autoinjectors and Possible Alternatives.",
+                        "journal": "The journal of allergy and clinical immunology. In practice",
+                        "date": "2020-02-01T00:00:00"
+                    },
+                    {
+                        "id": 8,
+                        "title": "Time to epinephrine treatment is associated with the risk of mortality in children who achieve sustained ROSC after traumatic out-of-hospital cardiac arrest.",
+                        "journal": "The journal of allergy and clinical immunology. In practice",
+                        "date": "2020-03-01T00:00:00"
+                    }
+                ],
+                "clinical_trials": [
+                    {
+                        "id": "NCT04188184",
+                        "title": "Tranexamic Acid Versus Epinephrine During Exploratory Tympanotomy",
+                        "journal": "Journal of emergency nursing",
+                        "date": "2020-04-27T00:00:00"
+                    }
+                ],
+                "journals": [
+                    {
+                        "title": "The journal of allergy and clinical immunology. In practice",
+                        "dates": [
+                            "2020-02-01T00:00:00",
+                            "2020-03-01T00:00:00"
+                        ]
+                    },
+                    {
+                        "title": "Journal of emergency nursing",
+                        "dates": [
+                            "2020-04-27T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "The journal of allergy and clinical immunology. In practice",
+                    "dates": [
+                        "2020-02-01T00:00:00",
+                        "2020-03-01T00:00:00"
+                    ]
+                },
+                {
+                    "title": "Journal of emergency nursing",
+                    "dates": [
+                        "2020-04-27T00:00:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "atccode": "6302001",
+            "drug": "ISOPRENALINE",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": 9,
+                        "title": "Gold nanoparticles synthesized from Euphorbia fischeriana root by green route method alleviates the isoprenaline hydrochloride induced myocardial infarction in rats.",
+                        "journal": "Journal of photochemistry and photobiology. B, Biology",
+                        "date": "2020-01-01T00:00:00"
+                    }
+                ],
+                "clinical_trials": [],
+                "journals": [
+                    {
+                        "title": "Journal of photochemistry and photobiology. B, Biology",
+                        "dates": [
+                            "2020-01-01T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "Journal of photochemistry and photobiology. B, Biology",
+                    "dates": [
+                        "2020-01-01T00:00:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "atccode": "R01AD",
+            "drug": "BETAMETHASONE",
+            "mentions": {
+                "pubmed": [
+                    {
+                        "id": 10,
+                        "title": "Clinical implications of umbilical artery Doppler changes after betamethasone administration",
+                        "journal": "The journal of maternal-fetal & neonatal medicine",
+                        "date": "2020-01-01T00:00:00"
+                    },
+                    {
+                        "id": "11",
+                        "title": "Effects of Topical Application of Betamethasone on Imiquimod-induced Psoriasis-like Skin Inflammation in Mice.",
+                        "journal": "Journal of back and musculoskeletal rehabilitation",
+                        "date": "2020-01-01T00:00:00"
+                    },
+                    {
+                        "id": "",
+                        "title": "Comparison of pressure BETAMETHASONE release, phonophoresis and dry needling in treatment of latent myofascial trigger point of upper trapezius ATROPINE muscle.",
+                        "journal": "The journal of maternal-fetal & neonatal medicine",
+                        "date": "2020-01-03T00:00:00"
+                    }
+                ],
+                "clinical_trials": [
+                    {
+                        "id": "NCT04153396",
+                        "title": "Preemptive Infiltration With Betamethasone and Ropivacaine for Postoperative Pain in Laminoplasty or Laminectomy",
+                        "journal": "Hôpitaux Universitaires de Genève",
+                        "date": "2020-01-01T00:00:00"
+                    }
+                ],
+                "journals": [
+                    {
+                        "title": "The journal of maternal-fetal & neonatal medicine",
+                        "dates": [
+                            "2020-01-01T00:00:00",
+                            "2020-01-03T00:00:00"
+                        ]
+                    },
+                    {
+                        "title": "Journal of back and musculoskeletal rehabilitation",
+                        "dates": [
+                            "2020-01-01T00:00:00"
+                        ]
+                    },
+                    {
+                        "title": "Hôpitaux Universitaires de Genève",
+                        "dates": [
+                            "2020-01-01T00:00:00"
+                        ]
+                    }
+                ]
+            },
+            "journals": [
+                {
+                    "title": "The journal of maternal-fetal & neonatal medicine",
+                    "dates": [
+                        "2020-01-01T00:00:00",
+                        "2020-01-03T00:00:00"
+                    ]
+                },
+                {
+                    "title": "Journal of back and musculoskeletal rehabilitation",
+                    "dates": [
+                        "2020-01-01T00:00:00"
+                    ]
+                },
+                {
+                    "title": "Hôpitaux Universitaires de Genève",
+                    "dates": [
+                        "2020-01-01T00:00:00"
+                    ]
+                }
+            ]
+        }
+    ]
+}

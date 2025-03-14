@@ -1,0 +1,41 @@
+# Exclusion des informations sensibles GCP (credentials, Terraform state)
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars
+terraform/credentials.json
+
+# Airflow et Composer
+dags/__pycache__/
+dags/*.pyc
+logs/
+temp/
+
+# nom du bucket
+data/composer_bucket.json
+
+# Dépendances et environnement Python
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Fichiers temporaires et IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+#credentials
+service-account-file.json
+
+#docs
+test_python_de
