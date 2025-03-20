@@ -10,7 +10,7 @@ def load_data():
     Load data from Google Cloud Storage.
     """
     try:
-        # Configuration pour lire les fichiers depuis Google Cloud Storage
+        # Charger le fichier de configuration pour obtenir le nom du bucket
         with open('/home/airflow/gcs/data/composer_bucket.json') as f:
             data = json.load(f)
             bucket_name = data['composer_bucket'].replace('gs://', '')

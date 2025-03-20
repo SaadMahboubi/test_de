@@ -49,6 +49,7 @@ def extract_mentions(drugs_df, pubmed_df, clinical_trials_df):
         raise
     
     return mentions
+
 def build_graph(drugs_df, mentions):
     """
     Construit un graph sous forme de dictionnaire.

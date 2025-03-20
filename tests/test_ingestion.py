@@ -9,12 +9,15 @@ import pandas as pd
 import json
 import logging
 
+# Charger le fichier de configuration pour obtenir le nom du bucket
 with open('data/composer_bucket.json') as f:
     data_bucket = json.load(f)
     bucket_name = data_bucket['composer_bucket']
 
 class TestLoadData(unittest.TestCase):
 
+    # Ce test vérifie que les données sont correctement chargées à partir de GCS et que les DataFrames ne sont pas vides.
+    # Il simule les interactions avec le client de stockage et vérifie que les appels attendus sont effectués.
     @patch('ingestion.logging.info')
     @patch('ingestion.storage.Client')
     @patch('builtins.open', new_callable=mock_open, read_data='{"composer_bucket": "' + bucket_name + '"}')
@@ -22,7 +25,7 @@ class TestLoadData(unittest.TestCase):
         mock_bucket = MagicMock()
         mock_storage_client.return_value.get_bucket.return_value = mock_bucket
 
-        # Mock blobs and their return values
+        # Mock blobs et leurs valeurs de retours
         def create_mock_blob(return_value):
             mock_blob = MagicMock()
             mock_blob.download_as_text.return_value = return_value
@@ -44,6 +47,7 @@ class TestLoadData(unittest.TestCase):
 
         mock_logging_info.assert_called_with("Chargement des données réussi.")
 
+    # Ce test vérifie que l'erreur est correctement levée lorsque le chargement des données échoue en raison d'une erreur GCS.
     @patch('ingestion.storage.Client')
     @patch('builtins.open', new_callable=mock_open, read_data='{"composer_bucket": "' + bucket_name + '"}')
     def test_load_data_failure(self, mock_file, mock_storage_client):

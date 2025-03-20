@@ -7,12 +7,15 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../s
 from upload_to_gcs import upload_folder_to_gcs
 import json
 
+# Charger le fichier de configuration pour obtenir le nom du bucket
 with open('data/composer_bucket.json') as f:
     data = json.load(f)
     bucket_name = data['composer_bucket'].replace('gs://', '')
 
 class TestUploadToGCS(unittest.TestCase):
 
+    # Ce test vérifie que le dossier est correctement téléchargé vers GCS lorsque le client de stockage fonctionne comme prévu.
+    # Il simule les interactions avec le client de stockage et le système de fichiers pour vérifier que tous les fichiers sont téléchargés.
     @patch('upload_to_gcs.logging.info')
     @patch('upload_to_gcs.storage.Client')
     @patch('os.walk')
@@ -32,6 +35,7 @@ class TestUploadToGCS(unittest.TestCase):
         self.assertEqual(mock_blob.upload_from_filename.call_count, 3)
         mock_logging_info.assert_called_with(f"Téléchargement de source_folder/subdir/file3.txt vers gs://{bucket_name}/destination_folder/subdir/file3.txt terminé.")
 
+    # Ce test vérifie que l'erreur est correctement levée et enregistrée lorsque le client de stockage rencontre une exception.
     @patch('upload_to_gcs.logging.error')
     @patch('upload_to_gcs.storage.Client')
     def test_upload_folder_to_gcs_failure(self, mock_storage_client, mock_logging_error):

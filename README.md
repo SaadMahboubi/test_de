@@ -10,6 +10,7 @@ Ce projet implique la construction d'un pipeline de données utilisant Apache Ai
 - **data** : Contient les données sources pour nos traitements ainsi que le composer_bucket.json
 - **result** : Contient notre fichier resultat output.json (exporté à la suite de l'exécution de la pipeline)
 - **test** : Contient les tests unitaires et d'intégration.
+- **requetes_sql** : Contient les resultats au test sql.
 
 ## Architecture
 
@@ -209,7 +210,9 @@ Pour faire évoluer notre code afin de gérer de grandes volumétries de donnée
 1. **Automatisation** :
    - Nous automatisons le processus de déploiement et de maintenance du système en utilisant des outils comme argo
    - Executer le composer afin de refresh toutes les donénes à un instant donnée (fichiers yaml)
-   - Mise en place d'une ci/cd permettant d'éxecuter tout nos tests, deploiement et script python automatiquement.
+
+1. **Intégration et développement continue** :
+   Mise en place d'une ci/cd permettant d'éxecuter tout nos tests (test de linting, de compilation et de simulation 'plan') afin qu'il n'y ait pas de régression tout au long du développement, ce principe nous assure une qualité et une sécurité du code ainsi que du projet qui permet de délivrer de manière continue.
 
 2. **Traitement en Parallèle** :
    - Nous utiliserons des frameworks de traitement parallèle comme Apache Spark pour distribuer les tâches de traitement des données sur plusieurs nœuds, réduisant ainsi le temps nécessaire pour traiter de grands ensembles de données.

@@ -21,6 +21,7 @@ def main():
         
         # Construction du graphe de liaison
         graph = build_graph(drugs_df, mentions)
+        # Charger le fichier de configuration pour obtenir le nom du bucket
         with open('/home/airflow/gcs/data/composer_bucket.json') as f:
             data = json.load(f)
             bucket_name = data['composer_bucket'].replace('gs://', '')

@@ -8,6 +8,7 @@ from export import export_json_to_gcs
 import pandas as pd
 import json
 import logging
+# Charger le fichier de configuration pour obtenir le nom du bucket
 with open('data/composer_bucket.json') as f:
     data_bucket = json.load(f)
     bucket_name = data_bucket['composer_bucket']
@@ -15,6 +16,8 @@ with open('data/composer_bucket.json') as f:
 
 class TestExportJsonToGCS(unittest.TestCase):
 
+    # Ce test vérifie que l'exportation JSON vers GCS réussit lorsque les données sont correctement formatées.
+    # Il simule les interactions avec le client de stockage et vérifie que les appels attendus sont effectués.
     @patch('export.logging.info')
     @patch('export.storage.Client')
     def test_export_successful(self, mock_storage_client, mock_logging_info):
@@ -47,6 +50,7 @@ class TestExportJsonToGCS(unittest.TestCase):
             "Fichier JSON exporté vers GCS: gs://%s/%s", bucket_name, destination_blob_name
         )
 
+    # Ce test vérifie que l'erreur de sérialisation JSON est correctement levée lorsque les données ne sont pas sérialisables.
     @patch('export.storage.Client')
     def test_export_json_serialization_error(self, mock_storage_client):
         mock_storage_client.return_value.get_bucket.side_effect = Exception("Test Exception")
@@ -57,6 +61,7 @@ class TestExportJsonToGCS(unittest.TestCase):
         with self.assertRaises(TypeError):
             export_json_to_gcs(data, bucket_name, destination_blob_name)
 
+    # Ce test vérifie que l'erreur d'upload GCS est correctement gérée lorsque l'upload échoue.
     @patch('export.storage.Client')
     def test_export_gcs_upload_failure(self, mock_storage_client):
         mock_bucket = MagicMock()

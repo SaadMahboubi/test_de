@@ -9,6 +9,8 @@ from transformation import extract_mentions, build_graph
 
 class TestTransformation(unittest.TestCase):
 
+    # Ce test vérifie que les mentions de médicaments sont correctement extraites des DataFrames de publications et d'essais cliniques.
+    # Il vérifie également que les appels de logging sont effectués comme prévu.
     @patch('transformation.logging.info')
     def test_extract_mentions_successful(self, mock_logging_info):
         drugs_df = pd.DataFrame({
@@ -38,6 +40,7 @@ class TestTransformation(unittest.TestCase):
 
         mock_logging_info.assert_called_with("Extraction des mentions terminée avec succès.")
 
+    # Ce test vérifie que l'erreur est correctement levée lorsque les entrées sont invalides.
     @patch('transformation.logging.error')
     def test_extract_mentions_failure(self, mock_logging_error):
         with self.assertRaises(Exception):
@@ -45,6 +48,8 @@ class TestTransformation(unittest.TestCase):
 
         mock_logging_error.assert_called()
 
+    # Ce test vérifie que le graphe est correctement construit à partir des mentions et des données de médicaments.
+    # Il vérifie également que les appels de logging sont effectués comme prévu.
     @patch('transformation.logging.info')
     def test_build_graph_successful(self, mock_logging_info):
         drugs_df = pd.DataFrame({
@@ -52,7 +57,7 @@ class TestTransformation(unittest.TestCase):
             'drug': ['Paracetamol', 'Ibuprofen']
         })
 
-        # Modification des données de test
+        # données de test
         mentions = {
             'Paracetamol': {
                 'pubmed': [{'id': 1, 'title': 'Study of Paracetamol effectiveness', 'date': '2025-03-13', 'journal': 'Journal A'}],
@@ -91,6 +96,7 @@ class TestTransformation(unittest.TestCase):
 
         mock_logging_info.assert_called_with("Construction du graphe terminée avec succès.")
 
+    # Ce test vérifie que l'erreur est correctement levée lorsque les entrées sont invalides pour la construction du graphe.
     @patch('transformation.logging.error')
     def test_build_graph_failure(self, mock_logging_error):
         with self.assertRaises(Exception):

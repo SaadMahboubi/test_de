@@ -9,6 +9,7 @@ import pandas as pd
 import json
 import logging
 
+# Charger le fichier de configuration pour obtenir le nom du bucket
 with open('data/composer_bucket.json') as f:
     data_bucket = json.load(f)
     bucket_name = data_bucket['composer_bucket']
